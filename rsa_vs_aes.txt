@@ -1,6 +1,3 @@
-RSA vs AES - Performance and Use-Case Differences
--------------------------------------------------
-
 1. Type of Algorithm
 - RSA is an asymmetric (public-key) algorithm.
   It uses a public key for encryption and a private key for decryption.
@@ -34,3 +31,4 @@ RSA vs AES - Performance and Use-Case Differences
   RSA protects the AES key, and AES encrypts the actual data.
   This gives the strong security of public-key cryptography
   together with the high performance of symmetric encryption.
+
