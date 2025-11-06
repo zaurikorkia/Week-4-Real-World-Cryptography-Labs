@@ -1,0 +1,36 @@
+RSA vs AES - Performance and Use-Case Differences
+-------------------------------------------------
+
+1. Type of Algorithm
+- RSA is an asymmetric (public-key) algorithm.
+  It uses a public key for encryption and a private key for decryption.
+- AES is a symmetric algorithm.
+  It uses the same secret key for both encryption and decryption.
+
+2. Performance
+- RSA is mathematically heavy and much slower than AES.
+  It is not efficient for encrypting large files or data streams.
+- AES is very fast and efficient, especially with hardware acceleration (AES-NI).
+  It is suitable for encrypting large amounts of data (files, disks, network traffic).
+
+3. Key Sizes and Security
+- RSA usually uses large key sizes (2048 or 4096 bits) to provide security.
+  Even with large key sizes, it is mainly used for small pieces of data (keys, hashes).
+- AES uses shorter keys (128, 192, or 256 bits),
+  but for symmetric ciphers this already provides very strong security.
+
+4. Typical Use Cases
+- RSA is mainly used for:
+  * Key exchange (e.g., in TLS/HTTPS to send a symmetric key securely)
+  * Digital signatures and certificate-based authentication
+  * Encrypting small secrets such as session keys
+- AES is mainly used for:
+  * Encrypting files, backups, and databases
+  * Full-disk encryption
+  * VPNs, TLS data encryption, and other high-throughput scenarios
+
+5. Combined (Hybrid) Use
+- In real systems RSA and AES are often combined:
+  RSA protects the AES key, and AES encrypts the actual data.
+  This gives the strong security of public-key cryptography
+  together with the high performance of symmetric encryption.
